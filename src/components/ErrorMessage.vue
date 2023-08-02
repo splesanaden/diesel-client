@@ -1,10 +1,10 @@
 <template>
   <transition name="fade">
     <div
-      class="fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-red-500 text-white rounded shadow-lg"
+      class="fixed bottom-0 right-0 mb-4 mr-4 p-4 bg-red-500 text-black text-md font-black uppercase | border-4 border-black shadow-lg"
       v-if="playerStore.error.value"
     >
-      <div class="flex justify-between">
+      <div class="flex justify-between items-center">
         <div>{{ playerStore.error.value }}</div>
         <button @click="closeError">
           <svg
@@ -12,7 +12,7 @@
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            class="h-6 w-6 text-white"
+            class="h-5 w-5 ml-2 text-black"
           >
             <path
               stroke-linecap="round"

@@ -1,12 +1,8 @@
 <template>
-  <main
-    class="flex flex-col | justify-center items-center | h-full | p-4 text-center text-white | bg-secondary"
-  >
-    <div class="w-full gap-y-1">
-      <game-btn link="/register" color="accent"> Register </game-btn>
-      <game-btn link="/login" color="primary"> Log In</game-btn>
-    </div>
-  </main>
+  <div class="w-full max-w-xs gap-y-2">
+    <game-btn link="/register" color="white"> REGISTER </game-btn>
+    <game-btn link="/login" color="white"> LOG IN</game-btn>
+  </div>
 </template>
 
 <script setup>
@@ -15,7 +11,7 @@ import { onMounted } from "vue";
 import { storeToRefs } from "pinia";
 import { usePlayerStore } from "@/stores/usePlayerStore";
 
-import GameBtn from "@/components/buttons/GameBtn.vue";
+import GameBtn from "@/components/ui/GameBtn.vue";
 
 import { useRouter } from "vue-router";
 const router = useRouter();
@@ -30,7 +26,4 @@ onMounted(() => {
 
 <style scoped lang="scss">
 // Here would go any scoped styles for this component
-
-main {
-}
 </style>

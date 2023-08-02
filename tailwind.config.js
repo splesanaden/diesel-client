@@ -6,11 +6,13 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      primary: "#dd4e1e",
-      secondary: "#3b444b",
-      accent: "#e5703d",
-      dark: "#080808",
-      light: "#f0ece1",
+      secondary: "#4B4B4B",
+      light: "#D9D9D9",
+      basegray: "#4B4B4B",
+      common: "#2FE436",
+      uncommon: "#48B8DB",
+      rare: "#DAC612",
+      legendary: "#F02525",
     },
 
     extend: {
@@ -29,7 +31,7 @@ module.exports = {
         zinc: colors.zinc,
       },
       fontFamily: {
-        sans: ["Standard", "Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["nimbus-sans", "sans-serif"],
       },
       screens: {
         ...defaultTheme.screens,

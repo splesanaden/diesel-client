@@ -1,18 +1,31 @@
 <template>
-  <div
-    class="min-h-screen max-h-100 flex flex-col | bg-dark | text-light | rounded-lg"
-  >
-    <nav class="p-2 shadow-sm">
-      <h1 class="text-center text-xl font-semibold">Dieselpunk Mech Game</h1>
-    </nav>
-    <transition name="fade">
-      <router-view />
-    </transition>
+  <div class="flex flex-col | bg-light">
+    <Header />
+    <Currency v-show="player.id > 0" />
+    <main class="flex flex-col | justify-center items-center | h-full | p-4">
+      <transition name="fade">
+        <router-view />
+      </transition>
+    </main>
   </div>
 </template>
 
 <script setup>
 // Here would go any composition API methods, computed properties, etc.
+import { watch, ref } from "vue";
+import { storeToRefs } from "pinia";
+import { usePlayerStore } from "@/stores/usePlayerStore";
+
+import Header from "@/components/layout/Header.vue";
+import Currency from "@/components/layout/Currency.vue";
+
+const playerStore = storeToRefs(usePlayerStore());
+
+const player = ref(playerStore);
+watch(playerStore, (newVal, oldVal) => {
+  console.log("player changed", newVal, oldVal);
+  player.value = newVal;
+});
 </script>
 
 <style lang="scss" scoped>

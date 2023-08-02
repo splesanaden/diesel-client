@@ -1,17 +1,15 @@
+@import url("https://p.typekit.net/p.css?s=1&k=aez1oze&ht=tk&f=10793.10799&a=87447420&app=typekit&e=css");
+
 @import "./base.css";
+
 html,
 body {
-  background: black;
-  padding: 20px;
+  background: #4b4b4b;
 }
 #app {
   max-width: min(768px, 100vw);
-  max-height: calc(100vh - 4rem);
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-
-  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.5) inset;
-  border-radius: 10px;
+  height: 1024px;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
 }

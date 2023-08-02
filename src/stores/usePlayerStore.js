@@ -11,6 +11,7 @@ export const usePlayerStore = defineStore(
     const error = ref(null);
     const token = ref(null);
     const cash = ref(0);
+    const diamonds = ref(0);
 
     const leaveGame = () => {
       id.value = 0;
@@ -18,12 +19,13 @@ export const usePlayerStore = defineStore(
       error.value = null;
       token.value = null;
       cash.value = 0;
+      diamonds.value = 0;
       localStorage.removeItem("token");
 
       router.push({ name: "home" });
     };
 
-    return { id, name, error, token, cash, leaveGame };
+    return { id, name, error, token, cash, diamonds, leaveGame };
   },
   {
     persist: {
