@@ -7,6 +7,7 @@
         <router-view />
       </transition>
     </main>
+    <Footer v-show="player.id > 0" />
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import { storeToRefs } from "pinia";
 import { usePlayerStore } from "@/stores/usePlayerStore";
 
 import Header from "@/components/layout/Header.vue";
+import Footer from "@/components/layout/Footer.vue";
 import Currency from "@/components/layout/Currency.vue";
 
 const playerStore = storeToRefs(usePlayerStore());

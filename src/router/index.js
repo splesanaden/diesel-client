@@ -34,10 +34,10 @@ export const router = createRouter({
       // component: () => import('../views/AboutView.vue')
     },
     {
-      path: "/loadout",
-      name: "loadout",
+      path: "/equipment",
+      name: "equipment",
 
-      // component: () => import('../views/AboutView.vue')
+      component: () => import("../views/HangarView.vue"),
     },
     {
       path: "/shop",
@@ -45,6 +45,13 @@ export const router = createRouter({
 
       // component: () => import('../views/AboutView.vue')
     },
+    {
+      path: "/settings",
+      name: "settings",
+
+      // component: () => import('../views/AboutView.vue')
+    },
+
     {
       path: "/battle",
       name: "battle",

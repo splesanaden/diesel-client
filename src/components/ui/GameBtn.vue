@@ -51,7 +51,7 @@ let props = defineProps({
   },
 });
 const router = useRouter();
-console.log(props);
+
 const onClick = () => {
   if (props.link) {
     router.push(props.link);
