@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen flex flex-col">
+  <div
+    class="min-h-screen max-h-100 flex flex-col | bg-dark | text-light | rounded-lg"
+  >
     <nav class="p-2 shadow-sm">
       <h1 class="text-center text-xl font-semibold">Dieselpunk Mech Game</h1>
     </nav>
@@ -27,4 +29,6 @@
 .fade-leave-from {
   opacity: 1;
 }
+
+// BUTTON STYLES
 </style>

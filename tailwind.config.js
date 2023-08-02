@@ -5,9 +5,17 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    colors: {
+      primary: "#dd4e1e",
+      secondary: "#3b444b",
+      accent: "#e5703d",
+      dark: "#080808",
+      light: "#f0ece1",
+    },
+
     extend: {
       colors: {
-        transparent: "transparent",
+        transparent: "#00000000",
         current: "currentColor",
         black: colors.black,
         white: colors.white,
@@ -19,6 +27,9 @@ module.exports = {
         blue: colors.blue,
         green: colors.green,
         zinc: colors.zinc,
+      },
+      fontFamily: {
+        sans: ["Standard", "Inter", ...defaultTheme.fontFamily.sans],
       },
       screens: {
         ...defaultTheme.screens,

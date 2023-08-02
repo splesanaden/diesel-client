@@ -7,7 +7,7 @@
           Username
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+          class="appearance-none rounded-none | relative block w-full | px-3 py-2 | border border-light placeholder-light | focus:outline-none focus:ring-white focus:border-white focus:z-10 | text-white sm:text-sm | bg-transparent"
           id="username"
           type="text"
           v-model="username"
@@ -18,7 +18,7 @@
           Password
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+          class="appearance-none rounded-none | relative block w-full | px-3 py-2 | border border-light placeholder-light | focus:outline-none focus:ring-white focus:border-white focus:z-10 | text-white sm:text-sm | bg-transparent"
           id="password"
           type="password"
           v-model="password"
@@ -32,12 +32,7 @@
           Log In
         </button>
 
-        <router-link
-          to="/"
-          class="block w-full p-2 text-center | bg-zinc-600 hover:bg-zinc-700 | focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500 | text-white font-medium | rounded-md"
-        >
-          Back
-        </router-link>
+        <game-btn to="/" color="white"> Back </game-btn>
       </div>
     </form>
     <ErrorMessage :error="playerStore.error" />
@@ -51,6 +46,7 @@ import { RouterLink, useRouter } from "vue-router";
 import ErrorMessage from "@/components/ErrorMessage.vue";
 import { storeToRefs } from "pinia";
 import { usePlayerStore } from "@/stores/usePlayerStore";
+import GameBtn from "@/components/buttons/GameBtn.vue";
 const playerStore = storeToRefs(usePlayerStore());
 
 const router = useRouter();
