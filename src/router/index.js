@@ -28,6 +28,12 @@ export const router = createRouter({
       component: () => import("../views/HangarView.vue"),
     },
     {
+      path: "/squadron",
+      name: "squadron",
+
+      component: () => import("../views/SquadronView.vue"),
+    },
+    {
       path: "/missions",
       name: "missions",
 

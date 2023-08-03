@@ -7,12 +7,7 @@
         {{ currentRoute }}
       </div>
       <div class="col-span-3 flex justify-end items-center">
-        <component
-          :is="icons[pageIcon]"
-          height=""
-          width=""
-          class="fill-black h-10 w-10"
-        />
+        <component :is="icons[pageIcon]" class="fill-black h-10 w-10" />
       </div>
     </div>
     <form class="grid grid-cols-4" name="bottom-nav">
